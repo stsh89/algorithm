@@ -6,11 +6,11 @@ import (
 	"testing"
 )
 
-var InsertSort = algorithm.InsertSort
+var ReverseInsertSort = algorithm.ReverseInsertSort
 
-func TestInsertSort0(t *testing.T) {
+func TestReverseInsertSort0(t *testing.T) {
 	in := []int{}
-	got := InsertSort(in)
+	got := ReverseInsertSort(in)
 	want := []int{}
 
 	if !reflect.DeepEqual(got, want) {
@@ -18,9 +18,9 @@ func TestInsertSort0(t *testing.T) {
 	}
 }
 
-func TestInsertSort1(t *testing.T) {
+func TestReverseInsertSort1(t *testing.T) {
 	in := []int{1}
-	got := InsertSort(in)
+	got := ReverseInsertSort(in)
 	want := []int{1}
 
 	if !reflect.DeepEqual(got, want) {
@@ -28,20 +28,20 @@ func TestInsertSort1(t *testing.T) {
 	}
 }
 
-func TestInsertSort2(t *testing.T) {
-	in := []int{2, 1}
-	got := InsertSort(in)
-	want := []int{1, 2}
+func TestReverseInsertSort2(t *testing.T) {
+	in := []int{1, 2}
+	got := ReverseInsertSort(in)
+	want := []int{2, 1}
 
 	if !reflect.DeepEqual(got, want) {
 		t.Errorf("InsertSort(%v) == %v, want %v", in, got, want)
 	}
 }
 
-func TestInsertSortMany(t *testing.T) {
-	in := []int{7, 6, 5, 4, 3, 2, 1}
-	got := InsertSort(in)
-	want := []int{1, 2, 3, 4, 5, 6, 7}
+func TestReverseInsertSortMany(t *testing.T) {
+	in := []int{1, 2, 3, 4, 5, 6, 7}
+	got := ReverseInsertSort(in)
+	want := []int{7, 6, 5, 4, 3, 2, 1}
 
 	if !reflect.DeepEqual(got, want) {
 		t.Errorf("InsertSort(%v) == %v, want %v", in, got, want)
