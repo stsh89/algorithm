@@ -1,17 +1,19 @@
 package algorithm
 
-func GeneralInsertSort(array []int, order bool) []int {
-	if len(array) < 2 {
+func GeneralInsertSort(array *[]int, order bool) *[]int {
+	arr := *array
+
+	if len(arr) < 2 {
 		return array
 	}
 
-	for i := 1; i < len(array); i++ {
-		j, tmp := i, array[i]
+	for i := 1; i < len(arr); i++ {
+		j, tmp := i, arr[i]
 
 		for {
-			if (j > 0) && (sortingCondition(array[j-1], tmp, order)) {
-				array[j] = array[j-1]
-				array[j-1] = tmp
+			if (j > 0) && (sortingCondition(arr[j-1], tmp, order)) {
+				arr[j] = arr[j-1]
+				arr[j-1] = tmp
 				j--
 			} else {
 				break

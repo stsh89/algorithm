@@ -1,5 +1,5 @@
 package algorithm
 
-func InsertSort(array []int) []int {
+func InsertSort(array *[]int) *[]int {
 	return GeneralInsertSort(array, true)
 }
