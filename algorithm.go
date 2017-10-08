@@ -4,12 +4,18 @@ import (
 	"github.com/stsh89/algorithm/sorting"
 )
 
+func New(numbers []int) Algorithm {
+	return Algorithm{numbers}
+}
+
 type Algorithm struct {
 	numbers []int
 }
 
-func New(numbers []int) Algorithm {
-	return Algorithm{numbers}
+func (a *Algorithm) sort(sortStrategy func([]int)) []int {
+	tmp := append([]int(nil), a.numbers...)
+	sortStrategy(tmp)
+	return tmp
 }
 
 func (a *Algorithm) GetNumbers() []int {
@@ -21,5 +27,5 @@ func (a *Algorithm) SetNumbers(numbers []int) {
 }
 
 func (a *Algorithm) InsertSort() []int {
-	return sorting.Insert(append([]int(nil), a.numbers...))
+	return a.sort(sorting.Insert)
 }
