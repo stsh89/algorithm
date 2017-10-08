@@ -33,3 +33,7 @@ func (a *Algorithm) InsertSort() []int {
 func (a *Algorithm) BubbleSort() []int {
 	return a.sort(sorting.Bubble)
 }
+
+func (a *Algorithm) MergeSort() []int {
+	return a.sort(sorting.Merge)
+}
