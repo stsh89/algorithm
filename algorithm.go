@@ -29,3 +29,7 @@ func (a *Algorithm) SetNumbers(numbers []int) {
 func (a *Algorithm) InsertSort() []int {
 	return a.sort(sorting.Insert)
 }
+
+func (a *Algorithm) BubbleSort() []int {
+	return a.sort(sorting.Bubble)
+}
