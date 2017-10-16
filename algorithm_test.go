@@ -56,3 +56,13 @@ func TestMergeSort(t *testing.T) {
 		t.Errorf("GetNumbers() == %v, want %v", got, want)
 	}
 }
+
+func TestSubArrayProblem(t *testing.T) {
+	algorithm := algorithm.New([]int{-2, 1, -3, 4, -1, 2, 1, -5, 4})
+	got := algorithm.SubArrayProblem()
+	want := 6
+
+	if got != want {
+		t.Errorf("SubArrayProblem() == %d, want %d", got, want)
+	}
+}

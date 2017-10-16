@@ -2,6 +2,7 @@ package algorithm
 
 import (
 	"github.com/stsh89/algorithm/sorting"
+	"github.com/stsh89/algorithm/problems"
 )
 
 func New(numbers []int) Algorithm {
@@ -36,4 +37,8 @@ func (a *Algorithm) BubbleSort() []int {
 
 func (a *Algorithm) MergeSort() []int {
 	return a.sort(sorting.Merge)
+}
+
+func (a *Algorithm) SubArrayProblem() int {
+	return problems.SubArray(a.numbers)
 }
