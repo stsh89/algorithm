@@ -1,4 +1,4 @@
-package sorting
+package sortings
 
 func Bubble(numbers []int) {
 	if len(numbers) < 2 {

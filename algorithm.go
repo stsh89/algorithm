@@ -1,7 +1,7 @@
 package algorithm
 
 import (
-	"github.com/stsh89/algorithm/sorting"
+	"github.com/stsh89/algorithm/sortings"
 	"github.com/stsh89/algorithm/problems"
 )
 
@@ -28,15 +28,15 @@ func (a *Algorithm) SetNumbers(numbers []int) {
 }
 
 func (a *Algorithm) InsertSort() []int {
-	return a.sort(sorting.Insert)
+	return a.sort(sortings.Insert)
 }
 
 func (a *Algorithm) BubbleSort() []int {
-	return a.sort(sorting.Bubble)
+	return a.sort(sortings.Bubble)
 }
 
 func (a *Algorithm) MergeSort() []int {
-	return a.sort(sorting.Merge)
+	return a.sort(sortings.Merge)
 }
 
 func (a *Algorithm) SubArrayProblem() int {

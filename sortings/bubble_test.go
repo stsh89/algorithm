@@ -1,12 +1,12 @@
-package sorting_test
+package sortings_test
 
 import (
-	"github.com/stsh89/algorithm/sorting"
+	"github.com/stsh89/algorithm/sortings"
 	"reflect"
 	"testing"
 )
 
-var BubbleSort = sorting.Bubble
+var BubbleSort = sortings.Bubble
 
 func TestBubbleSort0(t *testing.T) {
 	in := []int{}
