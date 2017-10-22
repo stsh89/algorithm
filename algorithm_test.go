@@ -66,3 +66,20 @@ func TestSubArrayProblem(t *testing.T) {
 		t.Errorf("SubArrayProblem() == %d, want %d", got, want)
 	}
 }
+
+func TestPermuteBySorting(t *testing.T) {
+	algorithm := algorithm.New([]int{7, 6, 5, 4, 3, 2, 1})
+	got := algorithm.PermuteBySorting()
+	want := []int{2, 4, 3, 7, 5, 6, 1}
+
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("Insert() == %v, want %v", got, want)
+	}
+
+	got = algorithm.GetNumbers()
+	want = []int{7, 6, 5, 4, 3, 2, 1}
+
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("GetNumbers() == %v, want %v", got, want)
+	}
+}

@@ -2,6 +2,7 @@ package algorithm
 
 import (
 	"github.com/stsh89/algorithm/problems"
+	"github.com/stsh89/algorithm/random"
 	"github.com/stsh89/algorithm/sortings"
 )
 
@@ -41,4 +42,8 @@ func (a *Algorithm) MergeSort() []int {
 
 func (a *Algorithm) SubArrayProblem() int {
 	return problems.SubArray(a.numbers)
+}
+
+func (a *Algorithm) PermuteBySorting() []int {
+	return a.sort(random.PermuteBySorting)
 }
