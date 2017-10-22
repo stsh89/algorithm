@@ -1,8 +1,8 @@
 package algorithm
 
 import (
-	"github.com/stsh89/algorithm/sortings"
 	"github.com/stsh89/algorithm/problems"
+	"github.com/stsh89/algorithm/sortings"
 )
 
 func New(numbers []int) Algorithm {

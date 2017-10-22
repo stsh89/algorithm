@@ -9,7 +9,7 @@ var Max = utils.Max
 
 func MaxTest1(t *testing.T) {
 	a, b := 1, 3
-	got := Max(a,b)
+	got := Max(a, b)
 	want := 3
 
 	if got != want {
@@ -19,7 +19,7 @@ func MaxTest1(t *testing.T) {
 
 func MaxTest2(t *testing.T) {
 	a, b := 1, 1
-	got := Max(a,b)
+	got := Max(a, b)
 	want := 1
 
 	if got != want {

@@ -5,7 +5,7 @@ func Merge(numbers []int) {
 		return
 	}
 
-	mergeSort(numbers, 0, len(numbers) - 1)
+	mergeSort(numbers, 0, len(numbers)-1)
 }
 
 func merge(numbers []int, l, m, r int) {

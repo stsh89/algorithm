@@ -9,7 +9,7 @@ var Min = utils.Min
 
 func MinTest1(t *testing.T) {
 	a, b := 1, 3
-	got := Min(a,b)
+	got := Min(a, b)
 	want := 1
 
 	if got != want {
@@ -19,7 +19,7 @@ func MinTest1(t *testing.T) {
 
 func MinTest2(t *testing.T) {
 	a, b := 1, 1
-	got := Min(a,b)
+	got := Min(a, b)
 	want := 1
 
 	if got != want {
