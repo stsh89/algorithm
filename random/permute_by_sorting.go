@@ -1,19 +1,17 @@
 package random
 
 import (
-	"crypto/rand"
-	"math/big"
+	"github.com/stsh89/algorithm/utils"
 )
 
-func random(min, max int) int64 {
-	res, _ := rand.Int(rand.Reader, big.NewInt(int64(max-min)))
-	return res.Int64() + int64(min)
-}
+func seedRandomNumbers(numbers []int) []int64 {
+	res := make([]int64, len(numbers))
 
-func seedRandomNumbers(numbers []int64) {
-	for i := 0; i < len(numbers); i++ {
-		numbers[i] = random(1, len(numbers)*len(numbers)*len(numbers))
+	for i := 0; i < len(res); i++ {
+		res[i] = utils.Random(1, len(res)*len(res)*len(res))
 	}
+
+	return res
 }
 
 func sortByRandomNumbers(a []int, b []int64) {
@@ -32,7 +30,6 @@ func PermuteBySorting(numbers []int) {
 		return
 	}
 
-	tmp := make([]int64, len(numbers))
-	seedRandomNumbers(tmp)
-	sortByRandomNumbers(numbers, tmp)
+	randomNumbers := seedRandomNumbers(numbers)
+	sortByRandomNumbers(numbers, randomNumbers)
 }

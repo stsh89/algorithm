@@ -7,7 +7,7 @@ import (
 
 var Min = utils.Min
 
-func MinTest1(t *testing.T) {
+func TestMin1(t *testing.T) {
 	a, b := 1, 3
 	got := Min(a, b)
 	want := 1
@@ -17,7 +17,7 @@ func MinTest1(t *testing.T) {
 	}
 }
 
-func MinTest2(t *testing.T) {
+func TestMin2(t *testing.T) {
 	a, b := 1, 1
 	got := Min(a, b)
 	want := 1
