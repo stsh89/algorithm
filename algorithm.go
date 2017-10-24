@@ -47,3 +47,7 @@ func (a *Algorithm) SubArrayProblem() int {
 func (a *Algorithm) PermuteBySorting() []int {
 	return a.sort(random.PermuteBySorting)
 }
+
+func (a *Algorithm) RandomizeInPlace() []int {
+	return a.sort(random.RandomizeInPlace)
+}
