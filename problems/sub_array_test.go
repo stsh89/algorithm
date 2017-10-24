@@ -5,11 +5,9 @@ import (
 	"testing"
 )
 
-var SubArray = problems.SubArray
-
 func TestSubArray0(t *testing.T) {
 	in := []int{}
-	got := SubArray(in)
+	got := problems.SubArray(in)
 	want := 0
 
 	if got != want {
@@ -19,7 +17,7 @@ func TestSubArray0(t *testing.T) {
 
 func TestSubArray1(t *testing.T) {
 	in := []int{1}
-	got := SubArray(in)
+	got := problems.SubArray(in)
 	want := 1
 
 	if got != want {
@@ -29,7 +27,7 @@ func TestSubArray1(t *testing.T) {
 
 func TestSubArray2(t *testing.T) {
 	in := []int{1, 2}
-	got := SubArray(in)
+	got := problems.SubArray(in)
 	want := 3
 
 	if got != want {
@@ -39,7 +37,7 @@ func TestSubArray2(t *testing.T) {
 
 func TestSubArrayMany(t *testing.T) {
 	in := []int{-2, 1, -3, 4, -1, 2, 1, -5, 4}
-	got := SubArray(in)
+	got := problems.SubArray(in)
 	want := 6
 
 	if got != want {

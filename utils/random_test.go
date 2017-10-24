@@ -19,7 +19,7 @@ func TestRandom2(t *testing.T) {
 	a, b := 0, 2
 	got := utils.Random(a, b)
 
-	if got > int64(b) {
+	if got >= int64(b) || got < int64(a) {
 		t.Errorf("Min(%d, %d), got %d, want to be less than %d", a, b, got, b)
 	}
 }
@@ -28,7 +28,7 @@ func TestRandom3(t *testing.T) {
 	a, b := 0, 10
 	got := utils.Random(a, b)
 
-	if got > int64(b) {
+	if got >= int64(b) || got < int64(a) {
 		t.Errorf("Min(%d, %d), got %d, want to be less than %d", a, b, got, b)
 	}
 }

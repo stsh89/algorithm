@@ -6,11 +6,9 @@ import (
 	"testing"
 )
 
-var permuteBySorting = random.PermuteBySorting
-
 func TestPermuteBySorting0(t *testing.T) {
 	in := []int{}
-	permuteBySorting(in)
+	random.PermuteBySorting(in)
 	want := []int{}
 
 	if !reflect.DeepEqual(in, want) {
@@ -20,7 +18,7 @@ func TestPermuteBySorting0(t *testing.T) {
 
 func TestPermuteBySorting1(t *testing.T) {
 	in := []int{1}
-	permuteBySorting(in)
+	random.PermuteBySorting(in)
 	want := []int{1}
 
 	if !reflect.DeepEqual(in, want) {
@@ -30,7 +28,7 @@ func TestPermuteBySorting1(t *testing.T) {
 
 func TestPermuteBySortingMany(t *testing.T) {
 	in := []int{1, 2, 3, 4, 5, 6, 7}
-	permuteBySorting(in)
+	random.PermuteBySorting(in)
 	dont_want := []int{1, 2, 3, 4, 5, 6, 7}
 
 	if reflect.DeepEqual(in, dont_want) {

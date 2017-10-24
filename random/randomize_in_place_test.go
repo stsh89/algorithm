@@ -6,11 +6,9 @@ import (
 	"testing"
 )
 
-var randomizeInPlace = random.RandomizeInPlace
-
 func TestRandomizeInPlace0(t *testing.T) {
 	in := []int{}
-	randomizeInPlace(in)
+	random.RandomizeInPlace(in)
 	want := []int{}
 
 	if !reflect.DeepEqual(in, want) {
@@ -20,7 +18,7 @@ func TestRandomizeInPlace0(t *testing.T) {
 
 func TestRandomizeInPlace1(t *testing.T) {
 	in := []int{1}
-	randomizeInPlace(in)
+	random.RandomizeInPlace(in)
 	want := []int{1}
 
 	if !reflect.DeepEqual(in, want) {
@@ -30,7 +28,7 @@ func TestRandomizeInPlace1(t *testing.T) {
 
 func TestRandomizeInPlaceMany(t *testing.T) {
 	in := []int{1, 2, 3, 4, 5, 6, 7}
-	randomizeInPlace(in)
+	random.RandomizeInPlace(in)
 	dont_want := []int{1, 2, 3, 4, 5, 6, 7}
 
 	if reflect.DeepEqual(in, dont_want) {

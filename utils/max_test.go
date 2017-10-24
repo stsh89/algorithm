@@ -5,11 +5,9 @@ import (
 	"testing"
 )
 
-var Max = utils.Max
-
 func TestMaxt1(t *testing.T) {
 	a, b := 1, 3
-	got := Max(a, b)
+	got := utils.Max(a, b)
 	want := 3
 
 	if got != want {
@@ -19,7 +17,7 @@ func TestMaxt1(t *testing.T) {
 
 func TestMax2(t *testing.T) {
 	a, b := 1, 1
-	got := Max(a, b)
+	got := utils.Max(a, b)
 	want := 1
 
 	if got != want {
