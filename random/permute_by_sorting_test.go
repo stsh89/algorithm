@@ -31,9 +31,9 @@ func TestPermuteBySorting1(t *testing.T) {
 func TestPermuteBySortingMany(t *testing.T) {
 	in := []int{1, 2, 3, 4, 5, 6, 7}
 	permuteBySorting(in)
-	want := []int{2, 4, 3, 7, 5, 6, 1}
+	dont_want := []int{1, 2, 3, 4, 5, 6, 7}
 
-	if !reflect.DeepEqual(in, want) {
-		t.Errorf("permuteBySorting(%v), want %v", in, want)
+	if reflect.DeepEqual(in, dont_want) {
+		t.Errorf("permuteBySorting(%v), want %v", in, dont_want)
 	}
 }

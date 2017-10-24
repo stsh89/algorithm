@@ -70,14 +70,14 @@ func TestSubArrayProblem(t *testing.T) {
 func TestPermuteBySorting(t *testing.T) {
 	algorithm := algorithm.New([]int{7, 6, 5, 4, 3, 2, 1})
 	got := algorithm.PermuteBySorting()
-	want := []int{2, 4, 3, 7, 5, 6, 1}
+	dont_want := []int{7, 6, 5, 4, 3, 2, 1}
 
-	if !reflect.DeepEqual(got, want) {
-		t.Errorf("Insert() == %v, want %v", got, want)
+	if reflect.DeepEqual(got, dont_want) {
+		t.Errorf("Insert() == %v, want %v", got, dont_want)
 	}
 
 	got = algorithm.GetNumbers()
-	want = []int{7, 6, 5, 4, 3, 2, 1}
+	want := []int{7, 6, 5, 4, 3, 2, 1}
 
 	if !reflect.DeepEqual(got, want) {
 		t.Errorf("GetNumbers() == %v, want %v", got, want)
