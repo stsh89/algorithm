@@ -22,7 +22,7 @@ func TestHeapSort1(t *testing.T) {
 	want := []int{1}
 
 	if !reflect.DeepEqual(in, want) {
-                t.Errorf("HeapSort(), got %v, want %v", in, want)
+		t.Errorf("HeapSort(), got %v, want %v", in, want)
 	}
 }
 
@@ -32,7 +32,7 @@ func TestHeapSort2(t *testing.T) {
 	want := []int{1, 2}
 
 	if !reflect.DeepEqual(in, want) {
-                t.Errorf("HeapSort(), got %v, want %v", in, want)
+		t.Errorf("HeapSort(), got %v, want %v", in, want)
 	}
 }
 
@@ -42,6 +42,6 @@ func TestHeapSortMany(t *testing.T) {
 	want := []int{1, 2, 3, 4, 5, 6, 7}
 
 	if !reflect.DeepEqual(in, want) {
-                t.Errorf("HeapSort(), got %v, want %v", in, want)
+		t.Errorf("HeapSort(), got %v, want %v", in, want)
 	}
 }

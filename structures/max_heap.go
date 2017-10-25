@@ -2,7 +2,7 @@ package structures
 
 type MaxHeap struct {
 	numbers []int
-        size int
+	size    int
 }
 
 func NewMaxHeap(numbers []int) MaxHeap {
@@ -18,11 +18,11 @@ func (m *MaxHeap) GetSize() int {
 }
 
 func (m *MaxHeap) SetHeapSize(size int) {
-        m.size = size
+	m.size = size
 }
 
 func (m *MaxHeap) GetHeapSize() int {
-        return m.size
+	return m.size
 }
 
 func (m *MaxHeap) Left(i int) int {

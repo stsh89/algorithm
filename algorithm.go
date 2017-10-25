@@ -40,6 +40,10 @@ func (a *Algorithm) MergeSort() []int {
 	return a.sort(sortings.Merge)
 }
 
+func (a *Algorithm) HeapSort() []int {
+	return a.sort(sortings.Heap)
+}
+
 func (a *Algorithm) SubArrayProblem() int {
 	return problems.SubArray(a.numbers)
 }
