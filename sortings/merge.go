@@ -1,10 +1,10 @@
 package sortings
 
 func Merge(numbers []int) {
-	if len(numbers) < 2 {
-		return
-	}
+	sort(mainMerge, numbers)
+}
 
+func mainMerge(numbers []int) {
 	mergeSort(numbers, 0, len(numbers)-1)
 }
 

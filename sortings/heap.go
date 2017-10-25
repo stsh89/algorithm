@@ -5,6 +5,10 @@ import (
 )
 
 func Heap(numbers []int) {
+	sort(heap, numbers)
+}
+
+func heap(numbers []int) {
 	heap := structures.NewMaxHeap(numbers)
 	heap.Build()
 

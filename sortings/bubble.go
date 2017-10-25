@@ -1,10 +1,10 @@
 package sortings
 
 func Bubble(numbers []int) {
-	if len(numbers) < 2 {
-		return
-	}
+	sort(bubble, numbers)
+}
 
+func bubble(numbers []int) {
 	for i := 1; i < len(numbers); i++ {
 		for j := len(numbers) - 1; j >= i; j-- {
 			if numbers[j] < numbers[j-1] {
