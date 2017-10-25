@@ -6,8 +6,6 @@ import (
 	"testing"
 )
 
-var InsertSort = sortings.Insert
-
 func TestInsertSort0(t *testing.T) {
 	in := []int{}
 	sortings.Insert(in)

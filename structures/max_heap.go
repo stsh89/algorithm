@@ -2,6 +2,11 @@ package structures
 
 type MaxHeap struct {
 	numbers []int
+        size int
+}
+
+func NewMaxHeap(numbers []int) MaxHeap {
+	return MaxHeap{numbers, len(numbers)}
 }
 
 func (m *MaxHeap) GetNumbers() []int {
@@ -12,8 +17,12 @@ func (m *MaxHeap) GetSize() int {
 	return len(m.numbers)
 }
 
-func NewMaxHeap(numbers []int) MaxHeap {
-	return MaxHeap{numbers}
+func (m *MaxHeap) SetHeapSize(size int) {
+        m.size = size
+}
+
+func (m *MaxHeap) GetHeapSize() int {
+        return m.size
 }
 
 func (m *MaxHeap) Left(i int) int {
@@ -24,12 +33,16 @@ func (m *MaxHeap) Right(i int) int {
 	return 2*i + 1
 }
 
+func (m *MaxHeap) Swap(i, j int) {
+	m.numbers[i], m.numbers[j] = m.numbers[j], m.numbers[i]
+}
+
 func (m *MaxHeap) Heapify(i int) {
 	m.heapify(i - 1)
 }
 
 func (m *MaxHeap) Build() {
-	for i := m.GetSize() / 2; i >= 1; i-- {
+	for i := m.GetHeapSize() / 2; i >= 1; i-- {
 		m.Heapify(i)
 	}
 }
@@ -43,13 +56,13 @@ func (m *MaxHeap) right(i int) int {
 }
 
 func (m *MaxHeap) heapify(i int) {
-	left, right, largest := m.left(i), m.right(i), i
+	left, right, largest, size := m.left(i), m.right(i), i, m.GetHeapSize()
 
-	if left < m.GetSize() && m.numbers[left] > m.numbers[i] {
+	if left < size && m.numbers[left] > m.numbers[i] {
 		largest = left
 	}
 
-	if right < m.GetSize() && m.numbers[right] > m.numbers[largest] {
+	if right < size && m.numbers[right] > m.numbers[largest] {
 		largest = right
 	}
 
