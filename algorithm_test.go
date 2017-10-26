@@ -29,7 +29,7 @@ func TestBubbleSort(t *testing.T) {
 	want := []int{1, 2, 3, 4, 5, 6, 7}
 
 	if !reflect.DeepEqual(got, want) {
-		t.Errorf("Insert() == %v, want %v", got, want)
+		t.Errorf("BubbleSort() == %v, want %v", got, want)
 	}
 
 	got = algorithm.GetNumbers()
@@ -46,7 +46,7 @@ func TestMergeSort(t *testing.T) {
 	want := []int{1, 2, 3, 4, 5, 6, 7}
 
 	if !reflect.DeepEqual(got, want) {
-		t.Errorf("Insert() == %v, want %v", got, want)
+		t.Errorf("MergeSort() == %v, want %v", got, want)
 	}
 
 	got = algorithm.GetNumbers()
@@ -63,7 +63,7 @@ func TestHeapSort(t *testing.T) {
 	want := []int{1, 2, 3, 4, 5, 6, 7}
 
 	if !reflect.DeepEqual(got, want) {
-		t.Errorf("Insert() == %v, want %v", got, want)
+		t.Errorf("HeapSort() == %v, want %v", got, want)
 	}
 
 	got = algorithm.GetNumbers()
@@ -90,7 +90,7 @@ func TestPermuteBySorting(t *testing.T) {
 	dont_want := []int{7, 6, 5, 4, 3, 2, 1}
 
 	if reflect.DeepEqual(got, dont_want) {
-		t.Errorf("Insert() == %v, want %v", got, dont_want)
+		t.Errorf("PermuteBySorting() == %v, want %v", got, dont_want)
 	}
 
 	got = algorithm.GetNumbers()
@@ -107,7 +107,7 @@ func TestRandomizeInPlace(t *testing.T) {
 	dont_want := []int{7, 6, 5, 4, 3, 2, 1}
 
 	if reflect.DeepEqual(got, dont_want) {
-		t.Errorf("Insert() == %v, want %v", got, dont_want)
+		t.Errorf("RandomizeInPlace() == %v, want %v", got, dont_want)
 	}
 
 	got = algorithm.GetNumbers()
