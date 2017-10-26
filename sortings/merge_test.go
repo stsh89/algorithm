@@ -2,48 +2,17 @@ package sortings_test
 
 import (
 	"github.com/stsh89/algorithm/sortings"
+	"github.com/stsh89/algorithm/test_utils"
 	"reflect"
 	"testing"
 )
 
-var MergeSort = sortings.Merge
+func TestMerge(t *testing.T) {
+	for _, tt := range test_utils.SortingsTestSet {
+		sortings.Merge(tt.In)
 
-func TestMergeSort0(t *testing.T) {
-	in := []int{}
-	sortings.Merge(in)
-	want := []int{}
-
-	if !reflect.DeepEqual(in, want) {
-		t.Errorf("MergeSort(%v), want %v", in, want)
-	}
-}
-
-func TestMergeSort1(t *testing.T) {
-	in := []int{1}
-	sortings.Merge(in)
-	want := []int{1}
-
-	if !reflect.DeepEqual(in, want) {
-		t.Errorf("MergeSort(%v), want %v", in, want)
-	}
-}
-
-func TestMergeSort2(t *testing.T) {
-	in := []int{2, 1}
-	sortings.Merge(in)
-	want := []int{1, 2}
-
-	if !reflect.DeepEqual(in, want) {
-		t.Errorf("MergeSort(%v), want %v", in, want)
-	}
-}
-
-func TestMergeSortMany(t *testing.T) {
-	in := []int{7, 6, 5, 4, 3, 2, 1}
-	sortings.Merge(in)
-	want := []int{1, 2, 3, 4, 5, 6, 7}
-
-	if !reflect.DeepEqual(in, want) {
-		t.Errorf("MergeSort(%v), want %v", in, want)
+		if !reflect.DeepEqual(tt.In, tt.Out) {
+			t.Errorf("Merge(%v), got %v, want %v", tt.In, tt.In, tt.Out)
+		}
 	}
 }
