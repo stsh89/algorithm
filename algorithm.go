@@ -44,6 +44,10 @@ func (a *Algorithm) HeapSort() []int {
 	return a.sort(sortings.Heap)
 }
 
+func (a *Algorithm) QuickSort() []int {
+	return a.sort(sortings.Quick)
+}
+
 func (a *Algorithm) SubArrayProblem() int {
 	return problems.SubArray(a.numbers)
 }
