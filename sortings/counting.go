@@ -15,30 +15,30 @@
 package sortings
 
 func Counting(numbers []int, maxNumber int) []int {
-        if len(numbers) < 2 {
-                return numbers
-        }
+	if len(numbers) < 2 {
+		return numbers
+	}
 
-        res := make([]int, len(numbers))
-        k := maxNumber + 1
-        c := make([]int, k)
+	res := make([]int, len(numbers))
+	k := maxNumber + 1
+	c := make([]int, k)
 
-        for i := 0; i < k; i++ {
-                c[i] = 0
-        }
+	for i := 0; i < k; i++ {
+		c[i] = 0
+	}
 
-        for j := 0; j < len(numbers); j++ {
-                c[numbers[j]]++
-        }
+	for j := 0; j < len(numbers); j++ {
+		c[numbers[j]]++
+	}
 
-        for i := 1; i < k; i++ {
-                c[i] += c[i-1]
-        }
+	for i := 1; i < k; i++ {
+		c[i] += c[i-1]
+	}
 
-        for j := len(numbers) -1 ; j >= 0; j-- {
-                res[c[numbers[j]] - 1] = numbers[j]
-                c[numbers[j]]--
-        }
+	for j := len(numbers) - 1; j >= 0; j-- {
+		res[c[numbers[j]]-1] = numbers[j]
+		c[numbers[j]]--
+	}
 
-        return res
+	return res
 }

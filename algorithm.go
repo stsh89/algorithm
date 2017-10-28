@@ -53,6 +53,10 @@ func (a *Algorithm) RandomizedQuickSort() []int {
 	return a.sort(sortings.RandomizedQuick)
 }
 
+func (a *Algorithm) CountingSort(maxNumber int) []int {
+	return sortings.Counting(a.numbers, maxNumber)
+}
+
 func (a *Algorithm) SubArrayProblem() int {
 	return problems.SubArray(a.numbers)
 }

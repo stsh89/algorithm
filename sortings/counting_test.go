@@ -7,9 +7,9 @@ import (
 )
 
 var sortingsTestSet = []struct {
-	in  []int
-	out []int
-        maxNumber int
+	in        []int
+	out       []int
+	maxNumber int
 }{
 	{[]int{}, []int{}, 0},
 	{[]int{1}, []int{1}, 1},
