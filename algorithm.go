@@ -15,7 +15,8 @@ type Algorithm struct {
 }
 
 func (a *Algorithm) sort(sortStrategy func([]int)) []int {
-	tmp := append([]int(nil), a.numbers...)
+	tmp := make([]int, len(a.numbers))
+	copy(tmp, a.numbers)
 	sortStrategy(tmp)
 	return tmp
 }

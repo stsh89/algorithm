@@ -2,109 +2,116 @@ package algorithm_test
 
 import (
 	"github.com/stsh89/algorithm"
+	"github.com/stsh89/algorithm/test_utils"
 	"reflect"
 	"testing"
 )
 
 func TestInsertSort(t *testing.T) {
-	algorithm := algorithm.New([]int{7, 6, 5, 4, 3, 2, 1})
-	got := algorithm.InsertSort()
-	want := []int{1, 2, 3, 4, 5, 6, 7}
+	for _, tt := range test_utils.SortingsTestSet {
+		algorithm := algorithm.New(tt.In)
+		got := algorithm.InsertSort()
 
-	if !reflect.DeepEqual(got, want) {
-		t.Errorf("Insert() == %v, want %v", got, want)
-	}
+		if !reflect.DeepEqual(got, tt.Out) {
+			t.Errorf("algorithm.InsertSort(), got %v, want %v", got, tt.Out)
+		}
 
-	got = algorithm.GetNumbers()
-	want = []int{7, 6, 5, 4, 3, 2, 1}
+		got = algorithm.GetNumbers()
 
-	if !reflect.DeepEqual(got, want) {
-		t.Errorf("GetNumbers() == %v, want %v", got, want)
+		if !reflect.DeepEqual(got, tt.In) {
+			t.Errorf("GetNumbers() == %v, want %v", got, tt.In)
+		}
+
 	}
 }
 
 func TestBubbleSort(t *testing.T) {
-	algorithm := algorithm.New([]int{7, 6, 5, 4, 3, 2, 1})
-	got := algorithm.BubbleSort()
-	want := []int{1, 2, 3, 4, 5, 6, 7}
+	for _, tt := range test_utils.SortingsTestSet {
+		algorithm := algorithm.New(tt.In)
+		got := algorithm.BubbleSort()
 
-	if !reflect.DeepEqual(got, want) {
-		t.Errorf("BubbleSort() == %v, want %v", got, want)
-	}
+		if !reflect.DeepEqual(got, tt.Out) {
+			t.Errorf("algorithm.BubbleSort(), got %v, want %v", got, tt.Out)
+		}
 
-	got = algorithm.GetNumbers()
-	want = []int{7, 6, 5, 4, 3, 2, 1}
+		got = algorithm.GetNumbers()
 
-	if !reflect.DeepEqual(got, want) {
-		t.Errorf("GetNumbers() == %v, want %v", got, want)
+		if !reflect.DeepEqual(got, tt.In) {
+			t.Errorf("GetNumbers() == %v, want %v", got, tt.In)
+		}
+
 	}
 }
 
 func TestMergeSort(t *testing.T) {
-	algorithm := algorithm.New([]int{7, 6, 5, 4, 3, 2, 1})
-	got := algorithm.MergeSort()
-	want := []int{1, 2, 3, 4, 5, 6, 7}
+	for _, tt := range test_utils.SortingsTestSet {
+		algorithm := algorithm.New(tt.In)
+		got := algorithm.MergeSort()
 
-	if !reflect.DeepEqual(got, want) {
-		t.Errorf("MergeSort() == %v, want %v", got, want)
-	}
+		if !reflect.DeepEqual(got, tt.Out) {
+			t.Errorf("algorithm.MergeSort(), got %v, want %v", got, tt.Out)
+		}
 
-	got = algorithm.GetNumbers()
-	want = []int{7, 6, 5, 4, 3, 2, 1}
+		got = algorithm.GetNumbers()
 
-	if !reflect.DeepEqual(got, want) {
-		t.Errorf("GetNumbers() == %v, want %v", got, want)
+		if !reflect.DeepEqual(got, tt.In) {
+			t.Errorf("GetNumbers() == %v, want %v", got, tt.In)
+		}
+
 	}
 }
 
 func TestHeapSort(t *testing.T) {
-	algorithm := algorithm.New([]int{7, 6, 5, 4, 3, 2, 1})
-	got := algorithm.HeapSort()
-	want := []int{1, 2, 3, 4, 5, 6, 7}
+	for _, tt := range test_utils.SortingsTestSet {
+		algorithm := algorithm.New(tt.In)
+		got := algorithm.HeapSort()
 
-	if !reflect.DeepEqual(got, want) {
-		t.Errorf("HeapSort() == %v, want %v", got, want)
-	}
+		if !reflect.DeepEqual(got, tt.Out) {
+			t.Errorf("algorithm.HeapSort(), got %v, want %v", got, tt.Out)
+		}
 
-	got = algorithm.GetNumbers()
-	want = []int{7, 6, 5, 4, 3, 2, 1}
+		got = algorithm.GetNumbers()
 
-	if !reflect.DeepEqual(got, want) {
-		t.Errorf("GetNumbers() == %v, want %v", got, want)
+		if !reflect.DeepEqual(got, tt.In) {
+			t.Errorf("GetNumbers() == %v, want %v", got, tt.In)
+		}
+
 	}
 }
 
 func TestQuickSort(t *testing.T) {
-	algorithm := algorithm.New([]int{7, 6, 5, 4, 3, 2, 1})
-	got := algorithm.QuickSort()
-	want := []int{1, 2, 3, 4, 5, 6, 7}
+	for _, tt := range test_utils.SortingsTestSet {
+		algorithm := algorithm.New(tt.In)
+		got := algorithm.QuickSort()
 
-	if !reflect.DeepEqual(got, want) {
-		t.Errorf("QuickSort() == %v, want %v", got, want)
-	}
+		if !reflect.DeepEqual(got, tt.Out) {
+			t.Errorf("algorithm.QuickSort(), got %v, want %v", got, tt.Out)
+		}
 
-	got = algorithm.GetNumbers()
-	want = []int{7, 6, 5, 4, 3, 2, 1}
+		got = algorithm.GetNumbers()
 
-	if !reflect.DeepEqual(got, want) {
-		t.Errorf("GetNumbers() == %v, want %v", got, want)
+		if !reflect.DeepEqual(got, tt.In) {
+			t.Errorf("GetNumbers() == %v, want %v", got, tt.In)
+		}
+
 	}
 }
 
 func TestRandomizedQuickSort(t *testing.T) {
-	algorithm := algorithm.New([]int{7, 6, 5, 4, 3, 2, 1})
-	got := algorithm.RandomizedQuickSort()
-	want := []int{1, 2, 3, 4, 5, 6, 7}
+	for _, tt := range test_utils.SortingsTestSet {
+		algorithm := algorithm.New(tt.In)
+		got := algorithm.RandomizedQuickSort()
 
-	if !reflect.DeepEqual(got, want) {
-		t.Errorf("RandomizedQuickSort() == %v, want %v", got, want)
-	}
+		if !reflect.DeepEqual(got, tt.Out) {
+			t.Errorf("algorithm.RandomizedQuickSort(), got %v, want %v", got, tt.Out)
+		}
 
-	got = algorithm.GetNumbers()
-	want = []int{7, 6, 5, 4, 3, 2, 1}
+		got = algorithm.GetNumbers()
 
-	if !reflect.DeepEqual(got, want) {
-		t.Errorf("GetNumbers() == %v, want %v", got, want)
+		if !reflect.DeepEqual(got, tt.In) {
+			t.Errorf("GetNumbers() == %v, want %v", got, tt.In)
+		}
+
 	}
 }
 
