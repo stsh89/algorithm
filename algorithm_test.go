@@ -91,6 +91,23 @@ func TestQuickSort(t *testing.T) {
 	}
 }
 
+func TestRandomizedQuickSort(t *testing.T) {
+	algorithm := algorithm.New([]int{7, 6, 5, 4, 3, 2, 1})
+	got := algorithm.RandomizedQuickSort()
+	want := []int{1, 2, 3, 4, 5, 6, 7}
+
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("RandomizedQuickSort() == %v, want %v", got, want)
+	}
+
+	got = algorithm.GetNumbers()
+	want = []int{7, 6, 5, 4, 3, 2, 1}
+
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("GetNumbers() == %v, want %v", got, want)
+	}
+}
+
 func TestSubArrayProblem(t *testing.T) {
 	algorithm := algorithm.New([]int{-2, 1, -3, 4, -1, 2, 1, -5, 4})
 	got := algorithm.SubArrayProblem()
