@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-var sortingsTestSet = []struct {
+var countingByDigitNumberTestSet = []struct {
 	in        []int
 	out       []int
 	maxNumber int
@@ -19,7 +19,7 @@ var sortingsTestSet = []struct {
 }
 
 func TestCounting(t *testing.T) {
-	for _, tt := range sortingsTestSet {
+	for _, tt := range countingByDigitNumberTestSet {
 		got := sortings.Counting(tt.in, tt.maxNumber)
 
 		if !reflect.DeepEqual(got, tt.out) {
