@@ -1,5 +1,5 @@
 //
-// COUNTING-SORT
+// COUNTING-SORT(A, B, k)
 // 	let C[0..k] be a new array
 // 	for i = 0 to k
 // 		C[i] = 0
