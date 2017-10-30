@@ -4,9 +4,9 @@ import (
 	"math"
 )
 
-func CountingByDigitNumber(numbers []int, maxNumber, digitNumber int) []int {
+func CountingByDigitNumber(numbers []int, maxNumber, digitNumber int) {
 	if len(numbers) < 2 {
-		return numbers
+		return
 	}
 
 	res := make([]int, len(numbers))
@@ -30,7 +30,9 @@ func CountingByDigitNumber(numbers []int, maxNumber, digitNumber int) []int {
 		c[digit(numbers[j], digitNumber)]--
 	}
 
-	return res
+	for j := 0; j < len(numbers); j++ {
+		numbers[j] = res[j]
+	}
 }
 
 func digit(number int, digitNumber int) int {

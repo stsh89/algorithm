@@ -6,10 +6,12 @@
 
 package sortings
 
-func Radix(numbers []int, d int) []int {
+func Radix(numbers []int, d int) {
 	if len(numbers) < 2 {
-		return numbers
+		return
 	}
 
-	return numbers
+	for i := 1; i <= d; i++ {
+		CountingByDigitNumber(numbers, 1000, i)
+	}
 }

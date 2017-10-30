@@ -25,11 +25,11 @@ var countingTestSet = []struct {
 
 func TestCountingByDigitNumber(t *testing.T) {
 	for _, tt := range countingTestSet {
-		got := sortings.CountingByDigitNumber(tt.in, tt.maxNumber, tt.digitNumber)
+		sortings.CountingByDigitNumber(tt.in, tt.maxNumber, tt.digitNumber)
 
-		if !reflect.DeepEqual(got, tt.out) {
+		if !reflect.DeepEqual(tt.in, tt.out) {
 			t.Errorf("CountingByDigitNumber(%v, %v), got %v, want %v",
-				tt.maxNumber, tt.digitNumber, got, tt.out)
+				tt.maxNumber, tt.digitNumber, tt.in, tt.out)
 		}
 	}
 }
