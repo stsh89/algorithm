@@ -1,83 +1,71 @@
 package structures_test
 
 import (
-	s "github.com/stsh89/algorithm/structures"
 	"reflect"
 	"testing"
+
+	s "github.com/stsh89/algorithm/structures"
 )
 
-var testNodes = []struct {
-	node     *s.Node
-	nextNode *s.Node
-	prevNode *s.Node
-}{
-	{s.NewNode(0, nil, nil),
-		nil, nil},
-	{s.NewNode(0, s.NewNode(1, nil, nil), s.NewNode(2, nil, nil)),
-		s.NewNode(1, nil, nil), s.NewNode(2, nil, nil)},
-}
-
-func TestNodeGetValue(t *testing.T) {
-	node := s.NewNode(0, nil, nil)
-	got := node.GetValue()
+func TestNodeValueGet(t *testing.T) {
+	node := s.Node{Value: 0}
+	got := node.Value
 	want := 0
 
 	if got != want {
-		t.Errorf("node.GetValue(), got %v, want %v", got, want)
+		t.Errorf("get node.Value, %v, %v", got, want)
 	}
 }
 
-func TestNodeSetValue(t *testing.T) {
-	node := s.NewNode(0, nil, nil)
-	node.SetValue(1)
-	got := node.GetValue()
+func TestNodeValueSet(t *testing.T) {
+	node := s.Node{Value: 0}
+	node.Value = 1
+	got := node.Value
 	want := 1
 
 	if got != want {
-		t.Errorf("node.SetValue(), got %v, want %v", got, want)
+		t.Errorf("set node.Value, %v, %v", got, want)
 	}
 }
 
-func TestNodeGetNext(t *testing.T) {
-	for _, tt := range testNodes {
-		got := tt.node.GetNext()
-		want := tt.nextNode
+func TestNodeNextGet(t *testing.T) {
+	node := s.Node{Next: nil}
+	got := node.Next
+	var want *s.Node = nil
 
-		if !reflect.DeepEqual(got, want) {
-			t.Errorf("node.GetNext(), got %v, want %v", got, want)
-		}
+	if got != want {
+		t.Errorf("get node.Next, %v, %v", got, want)
 	}
 }
 
-func TestNodeSetNext(t *testing.T) {
-	node := s.NewNode(0, nil, nil)
-	node.SetNext(s.NewNode(1, nil, nil))
-	got := node.GetNext()
-	want := s.NewNode(1, nil, nil)
+func TestNodeNextSet(t *testing.T) {
+	node := s.Node{Next: nil}
+	node.Next = &s.Node{}
+	got := node.Next
+	want := &s.Node{}
 
 	if !reflect.DeepEqual(got, want) {
-		t.Errorf("node.SetNext(), got %v, want %v", got, want)
+		t.Errorf("set node.Next, %v, %v", got, want)
 	}
 }
 
-func TestNodeGetPrev(t *testing.T) {
-	for _, tt := range testNodes {
-		got := tt.node.GetPrev()
-		want := tt.prevNode
+func TestNodePrevGet(t *testing.T) {
+	node := s.Node{Prev: nil}
+	got := node.Prev
+	var want *s.Node = nil
 
-		if !reflect.DeepEqual(got, want) {
-			t.Errorf("node.GetPrev(), got %v, want %v", got, want)
-		}
+	if got != want {
+		t.Errorf("get node.Prev, %v, %v", got, want)
 	}
 }
 
-func TestNodeSetPrev(t *testing.T) {
-	node := s.NewNode(0, nil, nil)
-	node.SetPrev(s.NewNode(1, nil, nil))
-	got := node.GetPrev()
-	want := s.NewNode(1, nil, nil)
+func TestNodePrevSet(t *testing.T) {
+	node := s.Node{Prev: nil}
+	node.Prev = &s.Node{}
+	got := node.Prev
+	want := &s.Node{}
 
 	if !reflect.DeepEqual(got, want) {
-		t.Errorf("node.SetPrev(), got %v, want %v", got, want)
+		t.Errorf("set node.Prev, %v, %v", got, want)
 	}
 }
