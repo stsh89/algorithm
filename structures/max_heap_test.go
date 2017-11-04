@@ -1,9 +1,10 @@
 package structures_test
 
 import (
-	"github.com/stsh89/algorithm/structures"
 	"reflect"
 	"testing"
+
+	"github.com/stsh89/algorithm/structures"
 )
 
 func TestGetNumbers0(t *testing.T) {
