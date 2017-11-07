@@ -48,3 +48,25 @@ func (l *List) Numbers() []int {
 
 	return res
 }
+
+// Sort sorts list numbers
+func (l *List) Sort() {
+	if l.root == nil || l.root.Next == nil {
+		return
+	}
+
+	curr, next := l.root, l.root.Next
+
+	for next != nil {
+		for curr != next {
+			if curr.Value > next.Value {
+				curr.Value, next.Value = next.Value, curr.Value
+			}
+
+			curr = curr.Next
+		}
+
+		curr = l.root
+		next = next.Next
+	}
+}
