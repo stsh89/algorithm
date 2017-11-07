@@ -1,5 +1,6 @@
 package sortings
 
+// Quick sorts slice of integers
 func Quick(numbers []int) {
 	sort(quick, numbers)
 }

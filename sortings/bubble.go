@@ -1,5 +1,6 @@
 package sortings
 
+// Bubble sorts slice of integers
 func Bubble(numbers []int) {
 	sort(bubble, numbers)
 }

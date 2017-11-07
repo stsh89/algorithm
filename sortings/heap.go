@@ -4,6 +4,7 @@ import (
 	"github.com/stsh89/algorithm/structures"
 )
 
+// Heap sorts slice of integers
 func Heap(numbers []int) {
 	sort(heap, numbers)
 }

@@ -1,5 +1,6 @@
 package sortings
 
+// Merge sorts slice of integers
 func Merge(numbers []int) {
 	sort(mainMerge, numbers)
 }

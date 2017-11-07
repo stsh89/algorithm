@@ -17,6 +17,7 @@ import (
 	"github.com/stsh89/algorithm/utils"
 )
 
+// RandomizedQuick sorts slice of integers
 func RandomizedQuick(numbers []int) {
 	sort(randomizedQuick, numbers)
 }

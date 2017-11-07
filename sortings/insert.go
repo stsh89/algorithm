@@ -1,5 +1,6 @@
 package sortings
 
+// Insert sorts slice of integers
 func Insert(numbers []int) {
 	sort(insert, numbers)
 }

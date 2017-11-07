@@ -1,10 +1,11 @@
 package sortings_test
 
 import (
-	"github.com/stsh89/algorithm/sortings"
-	"github.com/stsh89/algorithm/test_utils"
 	"reflect"
 	"testing"
+
+	"github.com/stsh89/algorithm/sortings"
+	"github.com/stsh89/algorithm/test_utils"
 )
 
 func TestRandomizedQuick(t *testing.T) {

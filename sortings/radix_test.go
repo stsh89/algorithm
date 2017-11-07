@@ -1,9 +1,10 @@
 package sortings_test
 
 import (
-	"github.com/stsh89/algorithm/sortings"
 	"reflect"
 	"testing"
+
+	"github.com/stsh89/algorithm/sortings"
 )
 
 var sortingsTestSet = []struct {

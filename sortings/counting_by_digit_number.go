@@ -4,6 +4,7 @@ import (
 	"math"
 )
 
+// CountingByDigitNumber sorts slice of integers
 func CountingByDigitNumber(numbers []int, maxNumber, digitNumber int) {
 	if len(numbers) < 2 {
 		return

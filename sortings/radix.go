@@ -6,6 +6,7 @@
 
 package sortings
 
+// Radix sorts slice of integers
 func Radix(numbers []int, d int) {
 	if len(numbers) < 2 {
 		return

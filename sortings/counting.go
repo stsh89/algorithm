@@ -14,6 +14,7 @@
 
 package sortings
 
+// Counting sorts slice of integers
 func Counting(numbers []int, maxNumber int) []int {
 	if len(numbers) < 2 {
 		return numbers
