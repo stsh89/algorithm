@@ -172,3 +172,32 @@ func TestBuildMany(t *testing.T) {
 		t.Errorf("Build(), got %v, want %v", got, want)
 	}
 }
+
+func TestSetHeapSize(t *testing.T) {
+	heap := structures.NewMaxHeap([]int{})
+	got := heap.GetSize()
+	want := 0
+
+	if got != want {
+		t.Errorf("GetSize(), got %v, want %v", got, want)
+	}
+
+	heap.SetHeapSize(10)
+	got = heap.GetSize()
+	want = 0
+
+	if got != want {
+		t.Errorf("GetSize(), got %v, want %v", got, want)
+	}
+}
+
+func TestSwap(t *testing.T) {
+	heap := structures.NewMaxHeap([]int{0, 1})
+	heap.Swap(0, 1)
+	got := heap.GetNumbers()
+	want := []int{1, 0}
+
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("Swap(), got %v, want %v", got, want)
+	}
+}
